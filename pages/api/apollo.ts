@@ -17,7 +17,8 @@ export default cors(async function handler(req:any,res:any){
     await startServer;
 
     await server.createHandler({
-        path: '/api/apollo',
+        // path: '/api/apollo',
+        path: `${process.env.VERCEL_URL}/api/apollo`,
     })(req,res);
 });
 
