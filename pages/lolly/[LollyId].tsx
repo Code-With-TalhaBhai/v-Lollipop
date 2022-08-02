@@ -33,7 +33,7 @@ function LollyLink({}: Props) {
     <div className={styles.card}>
       <div>
       <p style={{margin:'1em 0',fontFamily:'open-sans, Helvetica, sans-serif'}}>Enjoy your lolly! Share it with this link:</p>    
-      <p className={styles.link}>http://localhost:3000/lolly/{router.query.LollyId}</p>
+      <p className={styles.link}>{`${process.env.VERCEL_URL}/lolly/${router.query.LollyId}`}</p>
       </div>
       <div className={styles.subcard}>
             <p id="recipient" className={styles.recipient}>{data?.link?.data?.sender}</p>
