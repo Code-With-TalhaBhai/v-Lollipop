@@ -1,0 +1,58 @@
+
+.lollydiv{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 120px;
+    /* border: 2px solid purple; */
+    margin-top: 100px;
+}
+
+.card{
+    /* border: 2px solid red; */
+    max-width: 600px;    
+}
+
+.link{
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    color: #fa73d9;
+    font-size: 1.2rem;
+    margin-top: 0.5em;
+    padding: 0.5em 1em;
+    border: solid 1px #000;
+    background-color: #000;
+}
+
+.subcard{
+    padding: 1em 2em;
+    margin-bottom: 1.5em;
+    background-color: rgba(0,0,0,.2);
+    box-shadow: rgb(0 0 0 / 60%) 0 0 10px;
+    /* text-align: right; */
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.subcard > * {
+    background: none;
+}
+
+.recipient, .from {
+    font-family: "Yellowtail",cursive;
+    font-size: 2.5rem;
+    font-style: normal;
+    text-shadow: #000 0 0 10px;
+    text-align: left;
+}
+
+.message{
+    font-family: 'Space Mono', monospace;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.from{
+    padding-left: 2rem;
+    text-align: center;
+}
