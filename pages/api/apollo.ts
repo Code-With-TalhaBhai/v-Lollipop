@@ -19,7 +19,7 @@ export default cors(async function handler(req:any,res:any){
     await server.createHandler({
         // path: 'https://v-lollipop.vercel.app/api/apollo',
         // path: `${process.env.VERCEL_URL}/api/apollo`,
-        path: `/api/apollo`,
+        path: `${process.env.NEXT_PUBLIC_MY_URL}/api/apollo`,
         // path: `${process.env.VERCEL_URL}/api/apollo`,
     })(req,res);
 });
