@@ -51,12 +51,12 @@ const LollyCard = (props: Props) => {
           bottom: chcol3
         }
     }}});
-    if(loading) return '...Loading';
-    if(data){
-    console.log(data)
-    router.push(`/lolly/${data.getLink.data.id}`)
-    }
-    }
+  }
+  
+  // if(loading) return '...Loading';
+  if(data){
+  router.push(`/lolly/${data.getLink.data.id}`)
+}
 
     const handleChange = (e:any)=>{
       setForm({...form,[e.target.name]:e.target.value})
@@ -73,7 +73,7 @@ const LollyCard = (props: Props) => {
     </div>
     </div>
     <div>
-      <form onSubmit={regLolly}>
+      <form>
       <div className={styles.lollyForm}>
         <div className={styles.to}>
         <label>To</label>
@@ -89,7 +89,7 @@ const LollyCard = (props: Props) => {
         </div>
         </div>
         {/* <Link href="/lolly/Lolly" type='submit' className={styles.lollySubmit}>Freeze this lolly and get a link</Link> */}
-        <button type='submit' className={styles.lollySubmit}>Freeze this lolly and get a link</button>
+        <button type='submit' onClick={regLolly} className={styles.lollySubmit}>Freeze this lolly and get a link</button>
       </form>      
     </div>
     </div>

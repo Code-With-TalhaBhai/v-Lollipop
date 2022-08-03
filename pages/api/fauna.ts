@@ -16,11 +16,13 @@ export default async function handler(
 ) {
     try{
         if(req.headers.getlink==='yes'){
+          console.log(req.body);
           const {id} = req.body;
           // console.log(id);
+          console.log(req.body.id)
           const dba = await client.query(
           q.Get(q.Match(q.Index('search_by_id'),id))
-          // q.Get(q.Match(q.Index('search_by_id'),"90393508451380"))
+          // q.Get(q.Match(q.Index('search_by_id'),"58358918634161"))
           // q.Get(q.Ref(q.Collection('links'),("338261997273481801")))
         )
         res.json({data:dba})
