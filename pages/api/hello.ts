@@ -5,11 +5,12 @@ type Data = {
   name: string
   work: string
   bug: string
+  check: string
 }
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: `${process.env.VERCEL_URL}`, work: `${process.env.VERCEL_ENV}`, bug:`${process.env.FAUNA_SECRET}` })
+  res.status(200).json({ name: `${process.env.VERCEL_URL}`, work: `${process.env.VERCEL_ENV}`, bug:`${process.env.FAUNA_SECRET}`, check:`${process.env.NEXT_PUBLIC_MY_URL}` })
 }
