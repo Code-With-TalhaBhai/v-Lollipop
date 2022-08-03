@@ -18,7 +18,10 @@ function LollyLink({}: Props) {
     variables:{id:router.query.LollyId},
   });
 
+  
+
   if(loading) return "...Loading";
+  if(error) console.log(error);
   if(data){
     console.log(data)
   }
