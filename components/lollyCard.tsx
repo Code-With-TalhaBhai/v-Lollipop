@@ -37,6 +37,7 @@ const LollyCard = (props: Props) => {
 
 
     const regLolly = (e:any)=>{
+      e.preventDefault();
       console.log(str)
       addLolly({variables:{
         inplink: {
@@ -55,7 +56,6 @@ const LollyCard = (props: Props) => {
     console.log(data)
     router.push(`/lolly/${data.getLink.data.id}`)
     }
-    e.preventDefault();
     }
 
     const handleChange = (e:any)=>{

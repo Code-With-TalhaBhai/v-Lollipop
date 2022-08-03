@@ -15,16 +15,16 @@ export default async function handler(
   res: NextApiResponse
 ) {
     try{
-        // if(req.headers.getlink==='yes'){
-          // const {id} = req.body;
+        if(req.headers.getlink==='yes'){
+          const {id} = req.body;
           // console.log(id);
           const dba = await client.query(
-          // q.Get(q.Match(q.Index('search_by_id'),id))
-          q.Get(q.Match(q.Index('search_by_id'),"90393508451380"))
+          q.Get(q.Match(q.Index('search_by_id'),id))
+          // q.Get(q.Match(q.Index('search_by_id'),"90393508451380"))
           // q.Get(q.Ref(q.Collection('links'),("338261997273481801")))
         )
         res.json({data:dba})
-        // }
+        }
 
         if(req.headers.postlink==='yes'){
           const {id,sender,message,receiver,color:{upper,middle,bottom}} = req.body;
