@@ -15,7 +15,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
     try{
-        if(req.headers.getlink==='yes'){
+        // if(req.headers.getlink==='yes'){
           const {id} = req.body;
           console.log(id);
           const dba = await client.query(
@@ -23,7 +23,7 @@ export default async function handler(
           // q.Get(q.Ref(q.Collection('links'),("338261997273481801")))
         )
         res.json({data:dba})
-        }
+        // }
 
         if(req.headers.postlink==='yes'){
           const {id,sender,message,receiver,color:{upper,middle,bottom}} = req.body;
