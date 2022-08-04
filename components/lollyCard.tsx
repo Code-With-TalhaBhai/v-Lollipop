@@ -55,7 +55,8 @@ const LollyCard = (props: Props) => {
   
   // if(loading) return '...Loading';
   if(data){
-  router.push(`${process.env.NEXT_PUBLIC_MY_URL}/lolly/${data.getLink.data.id}`)
+  // router.push(`${process.env.NEXT_PUBLIC_MY_URL}/lolly/${data.getLink.data.id}`)
+  router.push(`https://v-lollipop.vercel.app/lolly/${data.getLink.data.id}`)
 }
 
     const handleChange = (e:any)=>{
