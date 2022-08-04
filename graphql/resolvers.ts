@@ -23,8 +23,8 @@ export const resolvers = {
         link:async(_:any,{id}:any)=>{
             console.log(id);
             // const link =  await fetch(`${process.env.NEXT_PUBLIC_MY_URL}/api/fauna`,{
-            // const link =  await fetch("https://v-lollipop.vercel.app/api/fauna",{
-            const link =  await fetch("/api/fauna",{
+            const link =  await fetch("https://v-lollipop.vercel.app/api/fauna",{
+            // const link =  await fetch("/api/fauna",{
             // const link =  await fetch('http://localhost:3000/api/fauna',{
                 method: 'POST',
                 headers:{
@@ -47,8 +47,8 @@ export const resolvers = {
     Mutation:{
          getLink:async(_:any,{inplink:{id,sender,message,receiver,color}}:inputlink)=>{
             // const data = await fetch(`${process.env.NEXT_PUBLIC_MY_URL}/api/fauna`,{
-                const data =  await fetch("/api/fauna",{
-                // const data =  await fetch("https://v-lollipop.vercel.app/api/fauna",{
+                // const data =  await fetch("/api/fauna",{
+                const data =  await fetch("https://v-lollipop.vercel.app/api/fauna",{
                     // const data = await fetch('http://localhost:3000/api/fauna',{
                 method: 'POST',
                 headers:{
