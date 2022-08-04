@@ -1,7 +1,7 @@
-import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+import { ApolloClient, InMemoryCache } from '@apollo/client';
 
 
 export const client = new ApolloClient({
-    uri: `${process.env.VERCEL_URL}/api/apollo`,
+    uri: 'https://v-lollipop.vercel.app/api/apollo',
     cache: new InMemoryCache(),
   });
