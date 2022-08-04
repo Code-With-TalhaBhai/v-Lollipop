@@ -10,16 +10,16 @@ const server = new ApolloServer({typeDefs,resolvers});
 const startServer = server.start();
 
 export default cors(async function handler(req:any,res:any){
-    // if(req.method === 'OPTIONS'){
-    //     res.end();
-    //     return false;
-    // }
+    if(req.method === 'OPTIONS'){
+        res.end();
+        return false;
+    }
     await startServer;
 
     await server.createHandler({
-        path: 'https://v-lollipop.vercel.app/api/apollo',
+        // path: 'https://v-lollipop.vercel.app/api/apollo',
         // path: `${process.env.VERCEL_URL}/api/apollo`,
-        // path: '/api/apollo',
+        path: '/api/apollo',
         // path: `${process.env.NEXT_PUBLIC_MY_URL}/api/apollo`,
         // path: `${process.env.VERCEL_URL}/api/apollo`,
     })(req,res);
